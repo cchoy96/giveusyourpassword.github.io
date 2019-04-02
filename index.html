@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Guess the Password</title>
-</head>
+    <head>
+        <title>Guess the Password</title>
+    </head>
 
-<style>
-    .pass_field 
-    {
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-</style>
-    
-<body>
-<div class="pass_field">
-    <h2> What's the secret password? </h2>
-    <form>
-        <label for="pswd">Password Guess:</label>
-        <input type="password" id="pswd">
-        <input type="button" value="Submit" onclick="checkPswd();" />
-    </form>
-</div>
-  
-<!--Function to check password the already set password is admin-->
-<script type="text/javascript">
-    function checkPswd() {
-        var confirmPassword = "admin";
-        var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
-             window.location="success.html";
+    <style>
+        body
+        {
+            background-image: url("home.gif");
         }
-        else {
-            alert("Incorrect Password!");
+        .welcome_msg
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
         }
-    }
-</script>
-</body>
+        .pass_field
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <div class="welcome_msg">
+            <h1> Welcome to the SuperVirus Mainframe </h1>
+            <h2> Please enter your credentials below. </h2>
+        </div>
+        <div class="pass_field">
+
+            <form>
+                <label for="user">Username:</label>
+                <input type="email" id="user">
+                <br><br>
+                <label for="pswd">Password: </label>
+                <input type="password" id="pswd">
+                <br><br>
+                <input type="button" value="Submit" onclick="checkPswd();" />
+            </form>
+        </div>
+
+        <!--Function to check password the already set password is admin-->
+        <script type="text/javascript">
+            function checkPswd() {
+                var correctPassword = "admin";
+                var password = document.getElementById("pswd").value;
+                if (password == correctPassword) {
+                     window.location="success.html";
+                }
+                else {
+                    alert("Incorrect Password!");
+                }
+            }
+        </script>
+    </body>
 </html>
