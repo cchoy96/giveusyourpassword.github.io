@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess the Password</title>
+    </head>
+
+    <style>
+        body
+        {
+            background-image: url("virus.gif");
+        }
+        .welcome_msg
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
+        }
+        .pass_field
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <div class="welcome_msg">
+            <h1> INVALID CREDENTIALS. INTRUDER DETECTED. </h1>
+            <h1> INITIATING LOCKDOWN </h1>
+            <h2> Just try to break my increased security, CompileHEROES! </h2>
+        </div>
+
+        <div class="pass_field">
+            <form>
+                <label for="pswd1">Group 01: </label>
+                <input type="password" id="pswd1">
+                <br><br>
+                <label for="pswd2">Group 02: </label>
+                <input type="password" id="pswd2">
+                <br><br>
+                <label for="pswd3">Group 03: </label>
+                <input type="password" id="pswd3">
+                <br><br>
+                <label for="pswd4">Group 04: </label>
+                <input type="password" id="pswd4">
+                <br><br>
+                <label for="pswd5">Group 05: </label>
+                <input type="password" id="pswd5">
+                <br><br>
+                <label for="pswd6">Group 06: </label>
+                <input type="password" id="pswd6">
+                <br><br>
+                <label for="pswd7">Group 07: </label>
+                <input type="password" id="pswd7">
+                <br><br>
+                <label for="pswd8">Group 08: </label>
+                <input type="password" id="pswd8">
+                <br><br>
+                <label for="pswd9">Group 09: </label>
+                <input type="password" id="pswd9">
+                <br><br>
+                <label for="pswd10">Group 10: </label>
+                <input type="password" id="pswd10">
+                <br><br>
+                <label for="pswd11">Group 11: </label>
+                <input type="password" id="pswd11">
+                <br><br>
+                <label for="pswd12">Group 12: </label>
+                <input type="password" id="pswd12">
+                <br><br>
+                <label for="pswd13">Group 13: </label>
+                <input type="password" id="pswd13">
+                <br><br>
+                <label for="pswd14">Group 14: </label>
+                <input type="password" id="pswd14">
+                <br><br>
+                <label for="pswd15">Group 15: </label>
+                <input type="password" id="pswd15">
+                <br><br>
+                <label for="pswd16">Group 16: </label>
+                <input type="password" id="pswd16">
+                <br><br>
+                <label for="pswd17">Group 17: </label>
+                <input type="password" id="pswd17">
+                <br><br>
+                <label for="pswd18">Group 18: </label>
+                <input type="password" id="pswd18">
+                <br><br>
+                <input type="button" value="Submit" onclick="checkPswd();" />
+            </form>
+        </div>
+
+        <!--Function to check password the already set password is admin-->
+        <script type="text/javascript">
+            function check(pswd_id, correctPassword) {
+                var password = document.getElementById(pswd_id).value;
+                if (password == correctPassword) {
+                    return 0
+                } else {
+                    alert("Incorrect Password: " + password)
+                    return 1
+                }
+            }
+            function checkPswd() {
+                if (check("pswd1", "admin")) return;
+                window.location="success.html";
+            }
+        </script>
+    </body>
+</html>
