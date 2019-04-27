@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detective Work</title>
+    </head>
+
+    <style>
+        /* html {
+            background: url('detective.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        } */
+        body
+        {
+            background-image: url("imgs/detective.jpg");
+        }
+        .welcome_msg
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
+        }
+        .text_back
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
+        }
+        .pass_field
+        {
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <div class=text_back>
+            <div class="welcome_msg">
+                <h1> Reconstructing the Disaster </h1>
+            </div>
+        </div>
+
+        <div class="pass_field">
+            <form>
+                <label for="user">Username:</label>
+                <input type="email" id="user">
+                <br><br>
+                <label for="pswd">Password: </label>
+                <input type="password" id="pswd">
+                <br><br>
+                <input type="button" value="Next" onclick="next();" />
+            </form>
+        </div>
+
+        <!--Function to check password the already set password is admin-->
+        <script type="text/javascript">
+            function next() {
+                window.location="thankyou.html";
+            }
+        </script>
+    </body>
+</html>

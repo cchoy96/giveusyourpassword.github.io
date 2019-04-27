@@ -8,7 +8,7 @@
         body
         {
 			background-color: black;
-            background-image: url("imgs/conspiracy.jpg");
+            background-image: url("../imgs/detective.jpg");
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -18,10 +18,12 @@
 			margin: 0 auto;
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
 			color: black;
 		}
 		form
 		{
+			text-align: center;
 			color: black;
 			font-family: "Courier New", Courier, monospace;
 		}
@@ -40,21 +42,26 @@
 
 			padding: 10px;
 			background-color: #FEF8D6;
-
-            text-align: center;
 		}
     </style>
 
     <body>
 		<div class="text_box">
-			<h1>Welcome CompileHeroes</h1>
-            <br>
-            For your final task, you'll need to track down the villain and put
-            a stop to the SuperVirus once and for all!
+			<h1>Reconstructing the <br> SuperVirus Attack</h1> <br><br>
 
-            <form class="" action="content/reconstruct.html" method="post">
-                <br><input type="submit" value="Next"><br>
-            </form>
+			<form class="" action="villain_details.html" method="post">
+				Date of the first attack: <br>
+				<input type="text" name="_date" placeholder="Squad 15"><br><br>
+				Target of the first attack: <br>
+				<input type="text" name="target" placeholder="Squad 6"><br><br>
+				Affected areas (by Zip Code): <br>
+				<input type="text" name="areas" placeholder="Squad 9"><br><br>
+				Villain's Last Known Location: <br>
+				<input type="text" name="location" placeholder="Squad 14"><br><br>
+				<br>
+				<input type="submit" value="Submit Report">
+				<br>
+			</form>
 		</div>
     </body>
 </html>

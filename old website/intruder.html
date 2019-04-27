@@ -90,13 +90,13 @@
                 <label for="pswd18">Group 18: </label>
                 <input type="password" id="pswd18">
                 <br><br>
-                <input type="button" value="Submit" onclick="checkPswd();" />
+                <input type="button" value="Submit" onclick="submit();" />
             </form>
         </div>
 
         <!--Function to check password the already set password is admin-->
         <script type="text/javascript">
-            function check(pswd_id, correctPassword) {
+            function checkPswd(pswd_id, correctPassword) {
                 var password = document.getElementById(pswd_id).value;
                 if (password == correctPassword) {
                     return 0
@@ -105,8 +105,8 @@
                     return 1
                 }
             }
-            function checkPswd() {
-                if (check("pswd1", "admin")) return;
+            function submit() {
+                if (checkPswd("pswd1", "admin")) return;
                 window.location="success.html";
             }
         </script>
